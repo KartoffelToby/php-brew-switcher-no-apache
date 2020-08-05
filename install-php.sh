@@ -28,26 +28,7 @@ brew install --build-from-source php@7.3
 
 brew install --build-from-source php@7.4
 
-echo 'export PATH="/usr/local/opt/php@5.6/bin:$PATH"' >> ~/.zshrc
-echo 'export PATH="/usr/local/opt/php@5.6/sbin:$PATH"' >> ~/.zshrc
 
-echo 'export PATH="/usr/local/opt/php@7.0/bin:$PATH"' >> ~/.zshrc
-echo 'export PATH="/usr/local/opt/php@7.0/sbin:$PATH"' >> ~/.zshrc
-
-echo 'export PATH="/usr/local/opt/php@7.1/bin:$PATH"' >> ~/.zshrc
-echo 'export PATH="/usr/local/opt/php@7.1/sbin:$PATH"' >> ~/.zshrc
-
-echo 'export PATH="/usr/local/opt/php@7.2/bin:$PATH"' >> ~/.zshrc
-echo 'export PATH="/usr/local/opt/php@7.2/sbin:$PATH"' >> ~/.zshrc
-
-
-echo 'export PATH="/usr/local/opt/php@7.3/bin:$PATH"' >> ~/.zshrc
-echo 'export PATH="/usr/local/opt/php@7.3/sbin:$PATH"' >> ~/.zshrc
-
-echo 'export PATH="/usr/local/opt/php@7.4/bin:$PATH"' >> ~/.zshrc
-echo 'export PATH="/usr/local/opt/php@7.4/sbin:$PATH"' >> ~/.zshrc
-
-source ~/.zshrc
 
 sudo curl -L https://raw.githubusercontent.com/KartoffelToby/php-brew-switcher-no-apache/master/sphp.sh > /usr/local/bin/sphp
 
