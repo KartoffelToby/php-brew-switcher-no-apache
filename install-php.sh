@@ -12,7 +12,7 @@ brew tap exolnet/homebrew-deprecated
 
 brew update
 
-brew install --build-from-source https://raw.githubusercontent.com/JParkinson1991/homebrew-deprecated/79d817a7ef794234d5276df0487a9d037b7b7bba/Formula/php@5.6.rb --with-openssl-1.1-patch
+brew install --build-from-source https://raw.githubusercontent.com/JParkinson1991/homebrew-deprecated/79d817a7ef794234d5276df0487a9d037b7b7bba/Formula/exolnet/deprecated/php@5.6.rb --with-openssl-1.1-patch
 
 
 brew install --build-from-source php@7.0
