@@ -12,6 +12,8 @@ brew tap exolnet/homebrew-deprecated
 
 brew update
 
+brew install zsh
+
 brew install --build-from-source https://raw.githubusercontent.com/JParkinson1991/homebrew-deprecated/79d817a7ef794234d5276df0487a9d037b7b7bba/Formula/php@5.6.rb --with-openssl-1.1-patch
 
 
@@ -24,6 +26,27 @@ brew install --build-from-source php@7.2
 brew install --build-from-source php@7.3
 
 brew install --build-from-source php@7.4
+
+echo 'export PATH="/usr/local/opt/php@5.6/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/usr/local/opt/php@5.6/sbin:$PATH"' >> ~/.zshrc
+
+echo 'export PATH="/usr/local/opt/php@7.0/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/usr/local/opt/php@7.0/sbin:$PATH"' >> ~/.zshrc
+
+echo 'export PATH="/usr/local/opt/php@7.1/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/usr/local/opt/php@7.1/sbin:$PATH"' >> ~/.zshrc
+
+echo 'export PATH="/usr/local/opt/php@7.2/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/usr/local/opt/php@7.2/sbin:$PATH"' >> ~/.zshrc
+
+
+echo 'export PATH="/usr/local/opt/php@7.3/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/usr/local/opt/php@7.3/sbin:$PATH"' >> ~/.zshrc
+
+echo 'export PATH="/usr/local/opt/php@7.4/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/usr/local/opt/php@7.4/sbin:$PATH"' >> ~/.zshrc
+
+source ~/.zshrc
 
 sudo curl -L https://raw.githubusercontent.com/KartoffelToby/php-brew-switcher-no-apache/master/sphp.sh > /usr/local/bin/sphp
 
