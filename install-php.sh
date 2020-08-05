@@ -2,9 +2,10 @@
 
 echo "cleanup system..."
 
-for f in `brew list`; do 
-    brew uninstall --ignore-dependencies --force $f
-done
+# Comment this in if your installation was a mess
+#for f in `brew list`; do 
+#    brew uninstall --ignore-dependencies --force $f
+#done
 
 echo "install php 5.6 - 7.4 patched for catalina and php switcher no apache fix"
 
