@@ -75,6 +75,10 @@ if [[ " ${php_array[*]} " == *"$php_version"* ]]; then
             brew unlink $i
         done
         brew link --force "$php_version"
+	
+	export PATH="/usr/local/opt/$php_version/bin:$PATH"
+	export PATH="/usr/local/opt/$php_version/sbin:$PATH"
+
 
 	echo ""
         php -v
