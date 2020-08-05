@@ -1,6 +1,11 @@
-# php-brew-switcher-no-apache
-a php homebrew switcher wrapper ignore apache stuff
+# php-brew-switcher-no-apache / install php on macOS Catalina
 
+This repo has two main functions,
+
+1. PHP switcher without restarting or reanable apache on macOS (sphp.sh)
+2. Install PHP on macOS Catalina without hassle (patch version to be compiled with the latest and savest openssl version that comes with macOS Catalina (install-php.sh)
+
+***if you want to install the pachted php version but won't remove all brew packages fist, comment out the for loop in install-php.sh***
 
 # Installation
 
