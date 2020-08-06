@@ -3,7 +3,7 @@
 This repo has two main functions,
 
 1. PHP switcher without restarting or reanable apache on macOS (sphp.sh)
-2. Install PHP on macOS Catalina without hassle (patch version to be compiled with the latest and savest openssl version that comes with macOS Catalina (install-php.sh)
+2. Install PHP's on macOS Catalina without hassle, install a php switcher that works with zsh and disable the annoying system default apache service (patch version to be compiled with the latest and savest openssl version that comes with macOS Catalina (install-php.sh)
 
 ***if you want to remove all brew packages fist because you have messed up, comment in the for loop in install-php.sh (Warning will remove all brew installations first)***
 
