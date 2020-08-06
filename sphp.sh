@@ -40,14 +40,6 @@ if [[ $(echo "$php_version" | sed 's/^php@//' | sed 's/\.//') -ge 70 ]]; then
     apache_php_lib_path="$apache_php7_lib_path"
 fi
 
-apache_change=0
-apache_conf_path="/usr/local/etc/httpd/httpd.conf"
-apache_php_mod_path="$php_opt_path$php_version$apache_php_lib_path"
-
-valet_restart=0
-# Check if valet is already install
-hash valet 2>/dev/null && valet_installed=1 || valet_installed=0
-
 POSITIONAL=()
 
 # What versions of php are installed via brew
@@ -56,12 +48,6 @@ for i in ${php_array[*]}; do
         php_installed_array+=("$i")
     fi
 done
-
-# Check if php version support via valet
-if [[ (" ${valet_support_php_version_array[*]} " != *"$php_version"*) && ($valet_restart -eq 1) ]]; then
-    echo "Sorry, but $php_version is not support via valet"
-    exit
-fi
 
 # Check that the requested version is supported
 if [[ " ${php_array[*]} " == *"$php_version"* ]]; then
@@ -72,13 +58,9 @@ if [[ " ${php_array[*]} " == *"$php_version"* ]]; then
         echo "Switching to $php_version"
         echo "Switching your shell"
         for i in ${php_installed_array[@]}; do
-            brew unlink $i
+            brew unlink $i &>/dev/null
         done
-        brew link --force "$php_version"
-	
-	export PATH="/usr/local/opt/$php_version/bin:$PATH"
-	export PATH="/usr/local/opt/$php_version/sbin:$PATH"
-
+        brew link --force --overwrite "$php_version" &>/dev/null
 
 	echo ""
         php -v
