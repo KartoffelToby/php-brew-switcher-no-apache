@@ -37,4 +37,9 @@ sudo chmod +x /usr/local/bin/sphp
 
 echo 'export PATH="/usr/local/bin:/usr/local/sbin:$PATH"' >> ~/.zshrc
 
-echo "done... use sphp %PHPVERSION%"
+echo "Disable the default apache daemon"
+
+sudo apachectl stop
+sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist 2>/dev/null
+
+echo "done... use sphp %PHPVERSION% to switch php versions"
